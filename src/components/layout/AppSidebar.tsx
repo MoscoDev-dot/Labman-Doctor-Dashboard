@@ -12,7 +12,7 @@ export function AppSidebar() {
   return (
     <aside className="flex w-56 flex-col border-r border-border bg-sidebar">
       <nav className="flex flex-1 flex-col gap-1 px-3 py-4">
-        {navItems.map(item => (
+        {navItems.map((item) => (
           <NavLink
             key={item.title}
             to={item.url}
@@ -23,8 +23,10 @@ export function AppSidebar() {
             <item.icon className="h-4 w-4" />
             <span>{item.title}</span>
           </NavLink>
+
         ))}
       </nav>
+      <footer><p className="text-xs text-muted-foreground">Labman 3 version 3</p></footer>
     </aside>
   );
 }
