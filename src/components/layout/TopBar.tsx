@@ -34,7 +34,7 @@ export function TopBar() {
           </Button>
 
           {showNotifications && (
-            <div className="absolute right-0 top-12 w-80 rounded-lg border border-border bg-card shadow-lg">
+            <div className="fixed inset-x-4 top-16 z-50 rounded-lg border border-border bg-card shadow-lg md:absolute md:inset-auto md:right-0 md:top-12 md:w-80">
               <div className="border-b border-border px-4 py-3">
                 <p className="text-sm font-medium text-foreground">Critical Alerts</p>
               </div>
