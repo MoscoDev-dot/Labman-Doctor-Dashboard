@@ -79,27 +79,27 @@ export default function ContactLab() {
   const [isFaqOpen, setIsFaqOpen] = useState(false);
 
   return (
-    <div className="mx-auto max-w-[800px]">
-      <div className="mb-6">
-        <h1 className="text-2xl font-semibold text-foreground">Contact Lab</h1>
-        <p className="text-sm text-muted-foreground mt-1">
+    <div className="mx-auto max-w-[800px] space-y-4 md:space-y-6">
+      <div>
+        <h1 className="text-xl md:text-2xl font-semibold text-foreground">Contact Lab</h1>
+        <p className="text-xs md:text-sm text-muted-foreground mt-1">
           Get in touch with Target Pathology Laboratory
         </p>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid gap-4 grid-cols-1 sm:grid-cols-2">
         {contacts.map((c) => {
           const inner = (
-            <CardContent className="flex items-start gap-4 p-5">
+            <CardContent className="flex items-start gap-4 p-4 md:p-5">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
                 <c.icon className="h-5 w-5 text-primary" />
               </div>
-              <div>
-                <p className="font-medium text-foreground">{c.title}</p>
-                <p className="text-sm text-foreground mt-0.5">
+              <div className="min-w-0">
+                <p className="font-semibold text-sm md:text-base text-foreground">{c.title}</p>
+                <p className="text-xs md:text-sm text-foreground mt-0.5 truncate">
                   {c.description}
                 </p>
-                <p className="text-xs text-muted-foreground mt-1">{c.sub}</p>
+                <p className="text-[10px] md:text-xs text-muted-foreground mt-1">{c.sub}</p>
               </div>
             </CardContent>
           );
