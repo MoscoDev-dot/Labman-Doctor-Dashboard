@@ -63,8 +63,8 @@ export function TopBar() {
 
         <div className="flex items-center gap-2 border-l border-border pl-3 ml-1">
           <span className="text-sm text-foreground">Dr. Sarah Mitchell</span>
-          <Button variant="ghost" size="icon" title="Logout">
-            <LogOut className="h-4 w-4 text-muted-foreground" />
+          <Button size="icon" title="Logout" className="bg-primary text-white hover:bg-primary/90">
+            <LogOut className="h-4 w-4" />
           </Button>
         </div>
       </div>

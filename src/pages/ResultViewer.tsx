@@ -113,8 +113,7 @@ export default function ResultViewer() {
                             Ref: {pr.referenceRange} {pr.unit}
                           </p>
                           <Button
-                            variant="link"
-                            className="h-auto p-0 text-[11px] text-primary"
+                            className="h-auto p-0 text-[11px] text-white bg-primary px-2 py-1 rounded hover:bg-primary/90"
                             onClick={() => navigate(`/results/${pr.id}`)}
                           >
                             View Full Result →
@@ -236,22 +235,19 @@ export default function ResultViewer() {
         {/* Right — Actions */}
         <div className="space-y-2 order-3">
           <Button
-            variant="outline"
-            className="w-full justify-start gap-3 h-10 text-sm font-medium border-border/60 hover:bg-primary/5 hover:text-primary hover:border-primary/20"
+            className="w-full justify-start gap-3 h-10 text-sm font-medium bg-primary text-white hover:bg-primary/90"
             onClick={() => toast({ title: "PDF downloading..." })}
           >
             <Download className="h-4 w-4" /> Download PDF
           </Button>
           <Button
-            variant="outline"
-            className="w-full justify-start gap-3 h-10 text-sm font-medium border-border/60 hover:bg-primary/5 hover:text-primary hover:border-primary/20"
+            className="w-full justify-start gap-3 h-10 text-sm font-medium bg-primary text-white hover:bg-primary/90"
             onClick={() => navigate(`/patients?highlight=${result.patient.id}`)}
           >
             <TrendingUp className="h-4 w-4" /> View Trend
           </Button>
           <Button
-            variant="outline"
-            className="w-full justify-start gap-3 h-10 text-sm font-medium border-border/60 hover:bg-primary/5 hover:text-primary hover:border-primary/20"
+            className="w-full justify-start gap-3 h-10 text-sm font-medium bg-primary text-white hover:bg-primary/90"
             onClick={() =>
               toast({
                 title: "Result acknowledged",
@@ -346,7 +342,7 @@ function ReferralModal({ patientName }: { patientName: string }) {
           </div>
         </div>
         <DialogFooter>
-          <Button variant="outline" onClick={() => setOpen(false)}>
+          <Button className="bg-white text-primary hover:bg-gray-100 border border-primary" onClick={() => setOpen(false)}>
             Cancel
           </Button>
           <Button onClick={handleRefer} disabled={!selectedDoctor}>

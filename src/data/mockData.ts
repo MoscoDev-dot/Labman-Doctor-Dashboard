@@ -310,23 +310,6 @@ export const criticalAlerts: CriticalAlert[] = [
   },
 ];
 
-export const availableTests = [
-  "Full Blood Count",
-  "Urea & Electrolytes",
-  "Liver Function Tests",
-  "Thyroid Function",
-  "Lipid Panel",
-  "HbA1c",
-  "CRP",
-  "ESR",
-  "Coagulation Screen",
-  "Blood Culture",
-  "Urinalysis",
-  "Glucose (Fasting)",
-  "Iron Studies",
-  "Vitamin D",
-  "PSA",
-];
 
 export function getResultsByPatient(patientId: string): TestResult[] {
   return testResults.filter((r) => r.patient.id === patientId);

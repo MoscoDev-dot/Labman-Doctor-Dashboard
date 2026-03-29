@@ -44,8 +44,7 @@ export default function Dashboard() {
                     <p className="text-xs text-muted-foreground">{alert.timeFlagged}</p>
                   </div>
                   <Button
-                    variant="link"
-                    className="mt-2 h-auto p-0 text-xs text-primary"
+                    className="mt-2 h-auto px-4 py-2 text-xs text-white bg-primary hover:bg-primary/90"
                     onClick={() => navigate(`/results/${alert.resultId}`)}
                   >
                     View Result →
@@ -91,9 +90,8 @@ export default function Dashboard() {
                     <TableCell className="text-muted-foreground text-[10px] md:text-xs hidden lg:table-cell">{result.tat}</TableCell>
                     <TableCell className="text-right">
                       <Button
-                        variant="ghost"
                         size="sm"
-                        className="h-8 px-2 text-xs text-primary"
+                        className="h-8 px-2 text-xs text-white"
                         onClick={() => navigate(`/results/${result.id}`)}
                       >
                         Review

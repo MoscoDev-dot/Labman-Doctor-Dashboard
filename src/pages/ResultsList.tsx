@@ -147,9 +147,8 @@ export default function ResultsList() {
                   </TableCell>
                   <TableCell className="text-right">
                     <Button
-                      variant="ghost"
                       size="sm"
-                      className="text-xs text-primary h-8 px-2"
+                      className="text-xs text-white h-8 px-2"
                       onClick={() => navigate(`/results/${r.id}`)}
                     >
                       Open

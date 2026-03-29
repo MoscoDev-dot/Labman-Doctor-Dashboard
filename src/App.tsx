@@ -8,7 +8,6 @@ import Dashboard from "@/pages/Dashboard";
 import ResultsList from "@/pages/ResultsList";
 import ResultViewer from "@/pages/ResultViewer";
 import PatientHistory from "@/pages/PatientHistory";
-import SuggestTest from "@/pages/SuggestTest";
 import ContactLab from "@/pages/ContactLab";
 import NotFound from "@/pages/NotFound";
 
@@ -26,7 +25,6 @@ const App = () => (
             <Route path="/results" element={<ResultsList />} />
             <Route path="/results/:id" element={<ResultViewer />} />
             <Route path="/patients" element={<PatientHistory />} />
-            <Route path="/suggest" element={<SuggestTest />} />
             <Route path="/contact" element={<ContactLab />} />
           </Route>
           <Route path="*" element={<NotFound />} />
